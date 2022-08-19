@@ -1,0 +1,75 @@
+compilers:
+  - description: C++ compiler for TVM
+    match-compiler-exe: "(.*/)?clang"
+    code-insight-target-name: tvm
+    include-dirs:
+      - ${compiler-exe-dir}/../include/std
+      - ${compiler-exe-dir}/../include
+    match-language: CPP
+    match-sources: ".*\\.cpp"
+    defines:
+      __always_inline:
+      __interface: struct
+
+      __reflect_field: __builtin__reflect_field
+      __reflect_fields_count: __builtin__reflect_fields_count
+
+      __reflect_methods_count: __builtin__reflect_methods_count
+      __reflect_method_name: __builtin__reflect_method_name
+      __reflect_method_ptr_name: __builtin__reflect_method_ptr_name
+      __reflect_return_name: __builtin__reflect_return_name
+      __reflect_method_func_id: __builtin__reflect_method_func_id
+      __reflect_method_internal: __builtin__reflect_method_internal
+      __reflect_method_answer_id: __builtin__reflect_method_answer_id
+      __reflect_method_external: __builtin__reflect_method_external
+      __reflect_method_getter: __builtin__reflect_method_getter
+      __reflect_method_noaccept: __builtin__reflect_method_noaccept
+      __reflect_method_implicit_func_id: __builtin__reflect_method_implicit_func_id
+      __reflect_method_dyn_chain_parse: __builtin__reflect_method_dyn_chain_parse
+      __reflect_method_no_read_persistent: __builtin__reflect_method_no_read_persistent
+      __reflect_method_deploy: __builtin__reflect_method_deploy
+
+      __reflect_method_no_write_persistent: __builtin__reflect_method_no_write_persistent
+      __reflect_method_rv: __builtin__reflect_method_rv
+      __reflect_method_ptr_rv: __builtin__reflect_method_ptr_rv
+      __reflect_method_arg_struct: __builtin__reflect_method_arg_struct
+      __reflect_method_ptr_arg_struct: __builtin__reflect_method_ptr_arg_struct
+      __reflect_method_ptr_internal: __builtin__reflect_method_ptr_internal
+      __reflect_method_ptr_answer_id: __builtin__reflect_method_ptr_answer_id
+      __reflect_interface_has_pubkey: __builtin__reflect_interface_has_pubkey
+      __reflect_interface_has_timestamp: __builtin__reflect_interface_has_timestamp
+      __reflect_interface_has_expire: __builtin__reflect_interface_has_expire
+      __reflect_signature_func_id: __builtin__reflect_signature_func_id
+
+      __reflect_smart_interface: __builtin__reflect_smart_interface
+
+      __reflect_method_ptr: __builtin__reflect_method_ptr
+
+      tvm_tuple:
+      no_pubkey:
+      no_timestamp:
+      no_expire:
+      tvm_raw_func:
+      internal:
+      answer_id:
+      external:
+      getter:
+      noaccept:
+      implicit_func_id:
+      dyn_chain_parse:
+      deploy:
+      return_name:
+      no_read_persistent:
+      no_write_persistent:
+      no_persistent:
+
+      __tvm_builder: __builtin__tvm_cell
+      __tvm_slice: __builtin__tvm_slice
+      __tvm_cell: __builtin__tvm_cell
+      __tvm_tuple: __builtin__tvm_tuple
+
+    defines-text: |
+      #define __STDC__ 1
+      #define __cplusplus 202002L
+      #define __STDC_HOSTED__ 0
+      #define __STDC_NO_ATOMICS__ 1
